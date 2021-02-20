@@ -6,6 +6,48 @@ namespace MatrixRotate
     class Program
     {
 
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+
+            int val = 2, size = 5;
+            var dataMatrix = new List<List<int>>();
+            var identityMatrix = new List<List<int>>();
+            var resultMatrix = new List<List<int>>();
+            CreateIdentityMatrix(size, identityMatrix);
+
+            for (int i = 0; i < size; i++)
+            {
+                var vi = new List<int>();
+
+                for (int j = 0; j < size; j++)
+                {
+                   
+                    vi.Insert(j, val);
+                    val++;
+                }
+                dataMatrix.Insert(i, vi);
+            }
+
+            ListMatrix(dataMatrix, size, "DataMatrix");
+
+            ListMatrix(identityMatrix, size, "IdentityMatrix");
+
+            MatrixMultiply(size, resultMatrix, dataMatrix);
+
+            Matrix_rotation90(dataMatrix, size);
+
+            ListMatrix(resultMatrix, size, "ResultMatrix");
+
+            ListMatrix(dataMatrix, size, "DataMatrix");
+
+            Console.WriteLine("\nMatrix after rotating 90 degrees\n");
+
+            Console.ReadKey();
+       }
+
+
+
        private static int Matrix_rotation90(List<List<int>> matrix, int size)
         {
            int tail;
@@ -80,44 +122,6 @@ namespace MatrixRotate
             }
         }
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
 
-            int val = 2, size = 5;
-            var dataMatrix = new List<List<int>>();
-            var identityMatrix = new List<List<int>>();
-            var resultMatrix = new List<List<int>>();
-            CreateIdentityMatrix(size, identityMatrix);
-
-            for (int i = 0; i < size; i++)
-            {
-                var vi = new List<int>();
-
-                for (int j = 0; j < size; j++)
-                {
-                   
-                    vi.Insert(j, val);
-                    val++;
-                }
-                dataMatrix.Insert(i, vi);
-            }
-
-            ListMatrix(dataMatrix, size, "DataMatrix");
-
-            ListMatrix(identityMatrix, size, "IdentityMatrix");
-
-            MatrixMultiply(size, resultMatrix, dataMatrix);
-
-            Matrix_rotation90(dataMatrix, size);
-
-            ListMatrix(resultMatrix, size, "ResultMatrix");
-
-            ListMatrix(dataMatrix, size, "DataMatrix");
-
-            Console.WriteLine("\nMatrix after rotating 90 degrees\n");
-
-            Console.ReadKey();
-       }
     }
 }

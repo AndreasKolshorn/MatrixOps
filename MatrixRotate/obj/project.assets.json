@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixRotate.csproj",
+      "projectUniqueName": "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixOps/MatrixRotate/MatrixRotate.csproj",
       "projectName": "MatrixRotate",
-      "projectPath": "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixRotate.csproj",
+      "projectPath": "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixOps/MatrixRotate/MatrixRotate.csproj",
       "packagesPath": "/Users/andreaskolshorn/.nuget/packages/",
-      "outputPath": "/Users/andreaskolshorn/Projects/MatrixRotate/obj/",
+      "outputPath": "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixOps/MatrixRotate/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

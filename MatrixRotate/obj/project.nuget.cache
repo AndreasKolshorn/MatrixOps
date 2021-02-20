@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qIlKMHFZFVQjrW5WwdW/4mNdMrHpWpPH2HQeNIVsRNUiSc1zt4wYj6P1TwEiiD79CNwTJbXZPYJQrTjd5TSvtA==",
+  "dgSpecHash": "obok/dJJaAgVA+jxRU7AuiWNxT2/W9RNALlCyHAMj6yNFs+Fvu6+6AGj6k9OT9WnmC2HkBVb2Qa4MOtsCO4Zyg==",
   "success": true,
-  "projectFilePath": "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixRotate.csproj",
+  "projectFilePath": "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixOps/MatrixRotate/MatrixRotate.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
