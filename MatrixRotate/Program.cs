@@ -5,55 +5,52 @@ namespace MatrixRotate
 {
     class Program
     {
-
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Matrix Related Methods");
 
-            int val = 2, size = 5;
+            int size = 3;
             var dataMatrix = new List<List<int>>();
             var identityMatrix = new List<List<int>>();
             var resultMatrix = new List<List<int>>();
-            CreateIdentityMatrix(size, identityMatrix);
 
+            // Create a matrix of size size and rotate 90 degrees. 
+            CreateDataMatrix(dataMatrix, size, 10);
+            ListMatrix(dataMatrix, size, "Data Matrix");
+            MatrixRotate_90(dataMatrix, size);
+            ListMatrix(dataMatrix, size, "Data matrix rotate 90 degree clockwise");
+
+            // Apply a matrix multiply operation with an identity matrix.
+            ListMatrix(dataMatrix, size, "Using Data Matrix");
+            CreateIdentityMatrix(identityMatrix, size);
+            ListMatrix(identityMatrix, size, "Multiply by Identity Matrix");
+            MatrixMultiply(resultMatrix, dataMatrix, size);
+            ListMatrix(resultMatrix, size, "Resulting Data Matrix");
+
+            Console.ReadKey();
+        }
+
+        private static void CreateDataMatrix (List<List<int>> dataMatrix, int size, int seed)
+        {
             for (int i = 0; i < size; i++)
             {
                 var vi = new List<int>();
 
                 for (int j = 0; j < size; j++)
                 {
-                   
-                    vi.Insert(j, val);
-                    val++;
+                    vi.Insert(j, seed);
+                    seed++;
                 }
+
                 dataMatrix.Insert(i, vi);
             }
+        }
 
-            ListMatrix(dataMatrix, size, "DataMatrix");
-
-            ListMatrix(identityMatrix, size, "IdentityMatrix");
-
-            MatrixMultiply(size, resultMatrix, dataMatrix);
-
-            Matrix_rotation90(dataMatrix, size);
-
-            ListMatrix(resultMatrix, size, "ResultMatrix");
-
-            ListMatrix(dataMatrix, size, "DataMatrix");
-
-            Console.WriteLine("\nMatrix after rotating 90 degrees\n");
-
-            Console.ReadKey();
-       }
-
-
-
-       private static int Matrix_rotation90(List<List<int>> matrix, int size)
+       private static int MatrixRotate_90(List<List<int>> matrix, int size)
         {
-           int tail;
+            int tail;
 
             for (int box =0; box<size/2; box++)
-
                 for (int runner=box; runner < size-box-1; runner++)
                 {
                     tail = matrix[box][runner];
@@ -72,14 +69,14 @@ namespace MatrixRotate
             Console.WriteLine(msg);
 
             for (int i = 0; i < size; i++)
-            {
+            { 
                 for (int j = 0; j < size; j++)
                     Console.Write(matrix[i][j].ToString() + " ");
                 Console.WriteLine();
             }
         }
 
-        private static void CreateIdentityMatrix( int size, List<List<int>> matrix)
+        private static void CreateIdentityMatrix(List<List<int>> matrix, int size)
         {
             int cnt;
             for (int i = 0; i < size; i++)
@@ -90,38 +87,36 @@ namespace MatrixRotate
                 for (int j=0; j<size; j++)
                 {
                    if (cnt < i+1) {
-                    vi.Insert(j, 1);
-                    cnt++;
+                        vi.Insert(j, 1);
+                        cnt++;
                    }
-                    else      
-                    vi.Insert(j, 0);
+                   else      
+                        vi.Insert(j, 0);
                 }
+
                 matrix.Insert(i, vi);
             }
         }
 
-        private static void MatrixMultiply(int size, List<List<int>> resultMatrix, List<List<int>> srcMatrix)
+        private static void MatrixMultiply(List<List<int>> resultMatrix, List<List<int>> srcMatrix, int size)
         {
             var identityMatrix = new List<List<int>>();
-            CreateIdentityMatrix(size, identityMatrix);
-            int tmp=0;
+            CreateIdentityMatrix(identityMatrix, size);
 
             for (int i = 0; i < size; i++)
             {
                 var row = new List<int>();
                 for (int j = 0; j < size; j++)
                 {
+                    int tmp = 0;
 
                     for (int r = 0; r < size; r++)
                         tmp += srcMatrix[i][r] * identityMatrix[r][j];
-                    row.Insert(j, tmp);
-                    tmp = 0;
-                }
 
+                    row.Insert(j, tmp);
+                }
                 resultMatrix.Insert(i, row);
             }
         }
-
-
     }
 }
