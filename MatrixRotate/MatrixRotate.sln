@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixRotate", "MatrixRotate.csproj", "{B12F86B6-808E-4324-A268-80BA3BE9FFF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B12F86B6-808E-4324-A268-80BA3BE9FFF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B12F86B6-808E-4324-A268-80BA3BE9FFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B12F86B6-808E-4324-A268-80BA3BE9FFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B12F86B6-808E-4324-A268-80BA3BE9FFF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB29AA6B-7651-4027-9AEC-2D51AA74072C}
+	EndGlobalSection
+EndGlobal

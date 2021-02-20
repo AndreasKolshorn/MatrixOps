@@ -1,0 +1,15 @@
+/Users/andreaskolshorn/Projects/MatrixRotate/bin/Debug/net5.0/MatrixRotate.deps.json
+/Users/andreaskolshorn/Projects/MatrixRotate/bin/Debug/net5.0/MatrixRotate.runtimeconfig.json
+/Users/andreaskolshorn/Projects/MatrixRotate/bin/Debug/net5.0/MatrixRotate.runtimeconfig.dev.json
+/Users/andreaskolshorn/Projects/MatrixRotate/bin/Debug/net5.0/MatrixRotate.dll
+/Users/andreaskolshorn/Projects/MatrixRotate/bin/Debug/net5.0/ref/MatrixRotate.dll
+/Users/andreaskolshorn/Projects/MatrixRotate/bin/Debug/net5.0/MatrixRotate.pdb
+/Users/andreaskolshorn/Projects/MatrixRotate/obj/Debug/net5.0/MatrixRotate.csprojAssemblyReference.cache
+/Users/andreaskolshorn/Projects/MatrixRotate/obj/Debug/net5.0/MatrixRotate.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andreaskolshorn/Projects/MatrixRotate/obj/Debug/net5.0/MatrixRotate.AssemblyInfoInputs.cache
+/Users/andreaskolshorn/Projects/MatrixRotate/obj/Debug/net5.0/MatrixRotate.AssemblyInfo.cs
+/Users/andreaskolshorn/Projects/MatrixRotate/obj/Debug/net5.0/MatrixRotate.csproj.CoreCompileInputs.cache
+/Users/andreaskolshorn/Projects/MatrixRotate/obj/Debug/net5.0/MatrixRotate.dll
+/Users/andreaskolshorn/Projects/MatrixRotate/obj/Debug/net5.0/ref/MatrixRotate.dll
+/Users/andreaskolshorn/Projects/MatrixRotate/obj/Debug/net5.0/MatrixRotate.pdb
+/Users/andreaskolshorn/Projects/MatrixRotate/obj/Debug/net5.0/MatrixRotate.genruntimeconfig.cache
