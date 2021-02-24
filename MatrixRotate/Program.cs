@@ -13,33 +13,18 @@ namespace MatrixOps
 
             var matrix = new MatrixOps();
 
-            int size = 4;
-            var dataMatrix = new List<List<int>>();
+            int size = 11;
+            List<List<int>> dataMatrix;
             List<List<int>> identityMatrix;
             List<List<int>> lowerLeft;
             List<List<int>> resultMatrix;
-            List<int> simpleList;
-
-            Console.WriteLine("");
-            simpleList = matrix.NewSimpleList(size);
-            for (int i=0; i< size; i++)
-            {
-                Console.Write($" {simpleList[i]}");
-            }
-            Console.WriteLine("");
-
-            simpleList.Sort(new SortIntDescending());
-
-            for (int i = 0; i < size; i++)
-            {
-                Console.Write($" {simpleList[i]}");
-            }
-            Console.WriteLine("");
-
+            List<List<int>> dataRandom;
+ 
             // Create a matrix and rotate 90 degrees. 
-            CreateDataMatrix(dataMatrix, size, 10);
+            dataMatrix= matrix.NewDataSeed(size, 10);
             matrix.List(dataMatrix, size, "Data Matrix");
-            matrix.Rotate_90(dataMatrix, size);
+
+            matrix.Rotate_90(dataMatrix);
             matrix.List(dataMatrix, size, "Data matrix rotate 90 degree clockwise");
 
             // Multiply two matricies.
@@ -62,45 +47,15 @@ namespace MatrixOps
             Console.WriteLine($"size {dataMatrix.Count}");
             Console.WriteLine($"capacity= {dataMatrix.Capacity}");
 
-            dataMatrix[1][0] = 99;
-            Console.WriteLine($"Value {dataMatrix[1][0]}");
+            dataRandom = matrix.NewDataRandom(3, 7);
+            matrix.ListRect(dataRandom);
 
-            dataMatrix[1][0] = 99;
-            Console.WriteLine($"Value {dataMatrix[1][0]}");
-
-            ;
+            matrix.SortEachRowInPlace(dataRandom);
+            matrix.ListRect(dataRandom);
 
             Console.ReadKey();
         }
 
-        private static void CreateDataMatrix (List<List<int>> dataMatrix, int size, int seed)
-        {
-            for (int i = 0; i < size; i++)
-            {
-                var vi = new List<int>();
 
-                for (int j = 0; j < size; j++)
-                {
-                    vi.Insert(j, seed);
-                    seed++;
-                }
-
-                dataMatrix.Insert(i, vi);
-            }
-        }
-
-        private class SortIntDescending : IComparer<int>
-        {
-            int IComparer<int>.Compare(int a, int b) //implement Compare
-            {
-                if (a > b)
-                    return 1; //normally greater than = 1
-                if (a < b)
-                    return -1; // normally smaller than = -1
-                else
-                    return 0; // equal
-
-            }
-        }
     }
 }

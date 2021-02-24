@@ -13,10 +13,13 @@ namespace MatrixOps
             Console.WriteLine($"Create Matrix Ops Object cnt={instances} ");
         }
 
-        public void Rotate_90(List<List<int>> matrix, int size)
+        public void Rotate_90(List<List<int>> matrix)
         {
             /* Rotate input matrix 90 degrees clockwise, in place. Time = O(n^2). Space= O(n^2). */
+            int size;
             int tail;
+
+            size = (matrix.Count ==matrix[0].Count? matrix.Count :0 );
 
             for (int box = 0; box < size / 2; box++)
                 for (int runner = box; runner < size - box - 1; runner++)
@@ -29,8 +32,76 @@ namespace MatrixOps
                 }
         }
 
-        public void NewFromSeed(List<List<int>> dataMatrix, int size, int seed)
+
+        public List<List<int>> NewDataSeed(int size,int seed)
         {
+            return NewDataSeed(size, size, seed);
+        }
+
+        public List<List<int>> NewDataSeed(int rows, int columns, int seed)
+        {
+            List<List<int>> matrix = new();
+
+            for (int i = 0; i < rows; i++)
+            {
+                List<int> row = new();
+
+                for (int j = 0; j < columns; j++)
+                {
+                    row.Insert(j, seed++);
+                }
+                matrix.Insert(i, row);
+            }
+            return matrix;
+        }
+
+
+
+
+        public List<List<int>> NewDataRandom(int size)
+        {
+            return NewDataRandom(size, size);
+        }
+
+        public List<List<int>> NewDataRandom(int rows, int columns)
+        {
+            var matrix = new List<List<int>>();
+            var rand = new Random();
+
+            for (int i=0; i<rows; i++)
+            {
+                var row = new List<int>();
+                for (int j=0; j<columns; j++)
+                {
+                    row.Insert(j, rand.Next(50, 100));
+                }
+                matrix.Insert(i,row);
+            }
+
+            return matrix;
+        }
+
+
+        public void ListRect(List<List<int>> matrix)
+        {
+            int ni = matrix.Count;
+            int nj = matrix[0].Count;
+
+            for (int i=0; i < ni; i++)
+            {
+                for (int j = 0; j < nj; j++)
+                    Console.Write($" {matrix[i][j]}");
+
+                Console.WriteLine("");
+            }
+
+            Console.WriteLine($" i={ni}/{matrix.Capacity} j={nj}/{matrix[0].Capacity}");
+        }
+
+        private static List<List<int>> NewDataMatrix(int size, int seed)
+        {
+            var matrix = new List<List<int>>(); 
+
             for (int i = 0; i < size; i++)
             {
                 var vi = new List<int>();
@@ -41,8 +112,9 @@ namespace MatrixOps
                     seed++;
                 }
 
-                dataMatrix.Insert(i, vi);
+                matrix.Insert(i, vi);
             }
+            return matrix;
         }
 
         public  List<List<int>> NewLowerLeft(int size)
@@ -138,7 +210,32 @@ namespace MatrixOps
             }
         }
 
+        public void SortEachRowInPlace(List<List<int>> matrix)
+        {
+            int mi = matrix.Count;
+            int mj = matrix[0].Count;
 
+            for (int i=0; i < mi; i++)
+            {
+                matrix[i].Sort(new SortIntDescending());
+            }
+        }
 
     }   //End Matrix Class
+
+    public class SortIntDescending : IComparer<int>
+    {
+        int IComparer<int>.Compare(int a, int b) //implement Compare
+        {
+            if (a > b)
+                return 1; //normally greater than = 1
+            if (a < b)
+                return -1; // normally smaller than = -1
+            else
+                return 0; // equal
+        }
+    }
+
+
 }   // End Namespace 
+
