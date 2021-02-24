@@ -5,31 +5,31 @@ namespace MatrixOps
 {
     public class MatrixOps
     {
-        public static int instances=0;
+        public static int instances = 0;
  
         public MatrixOps()
         {
-
-            instances =instances+1;   
-            Console.WriteLine($"Create Matrix Ops Object cnt={instances.ToString()} ");
+            instances += 1;
+            Console.WriteLine($"Create Matrix Ops Object cnt={instances} ");
         }
 
         public void Rotate_90(List<List<int>> matrix, int size)
         {
+            /* Rotate input matrix 90 degrees clockwise, in place. Time = O(n^2). Space= O(n^2). */
             int tail;
 
             for (int box = 0; box < size / 2; box++)
                 for (int runner = box; runner < size - box - 1; runner++)
                 {
                     tail = matrix[box][runner];
-                    matrix[box][runner] = matrix[size - runner - 1][box];        //TL
+                    matrix[box][runner] = matrix[size - runner - 1][box];                       //TL
                     matrix[size - runner - 1][box] = matrix[size - box - 1][size - runner - 1]; //BL
-                    matrix[size - box - 1][size - runner - 1] = matrix[runner][size - box - 1];        //BR
-                    matrix[runner][size - box - 1] = tail;                              //TR
+                    matrix[size - box - 1][size - runner - 1] = matrix[runner][size - box - 1]; //BR
+                    matrix[runner][size - box - 1] = tail;                                      //TR
                 }
         }
 
-        public static void CreateDataMatrix(List<List<int>> dataMatrix, int size, int seed)
+        public void NewFromSeed(List<List<int>> dataMatrix, int size, int seed)
         {
             for (int i = 0; i < size; i++)
             {
@@ -45,7 +45,7 @@ namespace MatrixOps
             }
         }
 
-        public List<List<int>> MakeLeftOnes(int size)
+        public  List<List<int>> NewLowerLeft(int size)
         {
             /* Create a square matrix of ones in lower left side including diagonal.
             * e.g.     1 0 0
@@ -76,7 +76,35 @@ namespace MatrixOps
             return matrix;
         }
 
-        public List<List<int>> Multiply (List<List<int>> leftMatrix, List<List<int>> rightMatrix, int size)
+        public List<List<int>> NewIdentity(int size)
+        {
+            var identity = new List<List<int>>();
+            for (int i=0; i < size; i++)
+            {
+                var row = new List<int>();
+                for (int j=0; j<size; j++)
+                {
+                     row.Insert(j, i==j? 1 : 0);
+                }
+
+                identity.Insert(i, row);
+            }
+
+            return identity;
+        }
+
+        public List<int> NewSimpleList(int size)
+        {
+            var rand = new Random();
+            var sList = new List<int>();
+            for (int i = 0; i < size; i++)
+                sList.Insert(i,  rand.Next(50,101));
+
+            return sList;
+        }
+
+
+        public List<List<int>> MultiplySqr (List<List<int>> leftMatrix, List<List<int>> rightMatrix, int size)
         {
             var resultMatrix = new List<List<int>>(); 
 
