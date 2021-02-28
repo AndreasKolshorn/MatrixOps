@@ -5,12 +5,13 @@ namespace MatrixOps
 {
     public class MatrixOps
     {
-        public static int instances = 0;
+        public string RunError { get; set; } 
+        public int Instances { get; set; }
  
         public MatrixOps()
         {
-            instances += 1;
-            Console.WriteLine($"Create Matrix Ops Object cnt={instances} ");
+            Instances += 1;
+          //  Console.WriteLine($"Create Matrix Ops Object cnt={Instances} ");
         }
 
         public void Rotate_90(List<List<int>> matrix)
@@ -55,8 +56,65 @@ namespace MatrixOps
             return matrix;
         }
 
+        public List<List<int>> MultiplyRectangular(List<List<int>> left, List<List<int>> right)
+        {
+            RunError = "";
+            List<List<int>> result = new();
 
+            int left_i = left.Count;
+            int left_j = left[0].Count;
+            int right_i = right.Count;
+            int right_j = right[0].Count;
 
+            // Check if the two matrices can be multiplied
+            if (left_j != right_i )
+            {
+                RunError = "Wrong Size: Matrix Left Cols != Matrix Right Rows";
+                return null;
+            }
+
+            try
+            {
+                int val = 0;
+                for (int i = 0; i < left_i; i++)
+                {
+                    var row = new List<int>();
+                    for (int j = 0; j < right_j; j++)
+                    {
+                        val = 0;
+                        for (int r = 0; r < right_i; r++)
+                            val += left[i][r] * right[r][j];
+
+                        row.Insert(j, val);
+                    }
+                    result.Insert(i, row);
+                }
+            }
+            catch
+            {
+                RunError = "Multiply Error";
+                return null;
+            }
+
+            return result;
+        }
+
+        public List<List<int>> NewCopy (List<List<int>> source)
+        {
+            List<List<int>> result = new();
+            int source_i = source.Count;
+            int source_j = source[0].Count;
+            for (int i =0; i<source_i; i++)
+            {
+                var row = new List<int>();
+                for (int j = 0; j < source_j; j++)
+                {
+                    row.Insert(j, source[i][j]);
+                }
+                result.Insert(i, row);
+            }
+            return result;
+        }
 
         public List<List<int>> NewDataRandom(int size)
         {
@@ -81,6 +139,26 @@ namespace MatrixOps
             return matrix;
         }
 
+        public List<List<int>> NewDataRect(int rows, int columns, int seed)
+        {
+            var matrix = new List<List<int>>();
+            var rand = new Random();
+
+            for (int i = 0; i < rows; i++)
+            {
+                var row = new List<int>();
+                for (int j = 0; j < columns; j++)
+                {
+                    row.Insert(j, seed++);
+                }
+                matrix.Insert(i, row);
+            }
+
+            return matrix;
+        }
+
+
+
 
         public void ListRect(List<List<int>> matrix)
         {
@@ -95,10 +173,10 @@ namespace MatrixOps
                 Console.WriteLine("");
             }
 
-            Console.WriteLine($" i={ni}/{matrix.Capacity} j={nj}/{matrix[0].Capacity}");
+            Console.WriteLine($" i={ni}/{matrix.Capacity} j={nj}/{matrix[0].Capacity} \n");
         }
 
-        private static List<List<int>> NewDataMatrix(int size, int seed)
+        public  List<List<int>> NewDataMatrix(int size, int seed)
         {
             var matrix = new List<List<int>>(); 
 
@@ -148,23 +226,6 @@ namespace MatrixOps
             return matrix;
         }
 
-        public List<List<int>> NewIdentity(int size)
-        {
-            var identity = new List<List<int>>();
-            for (int i=0; i < size; i++)
-            {
-                var row = new List<int>();
-                for (int j=0; j<size; j++)
-                {
-                     row.Insert(j, i==j? 1 : 0);
-                }
-
-                identity.Insert(i, row);
-            }
-
-            return identity;
-        }
-
         public List<int> NewSimpleList(int size)
         {
             var rand = new Random();
@@ -173,28 +234,6 @@ namespace MatrixOps
                 sList.Insert(i,  rand.Next(50,101));
 
             return sList;
-        }
-
-
-        public List<List<int>> MultiplySqr (List<List<int>> leftMatrix, List<List<int>> rightMatrix, int size)
-        {
-            var resultMatrix = new List<List<int>>(); 
-
-            for (int i = 0; i < size; i++)
-            {
-                var row = new List<int>();
-                for (int j = 0; j < size; j++)
-                {
-                    int tmp = 0;
-
-                    for (int r = 0; r < size; r++)
-                        tmp += leftMatrix[i][r] * rightMatrix[r][j];
-
-                    row.Insert(j, tmp);
-                }
-                resultMatrix.Insert(i, row);
-            }
-            return resultMatrix;
         }
 
         public void List(List<List<int>> matrix, int size, string msg)
