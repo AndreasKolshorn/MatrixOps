@@ -6,13 +6,14 @@ namespace MatrixOps
     public class MatrixOps
     {
         public string RunError { get; set; } 
-        public int Instances { get; set; }
+        public static int Instances { get; set; }
  
         public MatrixOps()
         {
             Instances += 1;
-          //  Console.WriteLine($"Create Matrix Ops Object cnt={Instances} ");
+            Console.WriteLine($"Create Matrix Ops Object cnt={Instances} ");
         }
+
 
         public void Rotate_90(List<List<int>> matrix)
         {
