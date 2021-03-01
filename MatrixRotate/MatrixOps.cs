@@ -156,9 +156,6 @@ namespace Matrix
             return matrix;
         }
 
-
-
-
         public void ListRect(List<List<int>> matrix)
         {
             int ni = matrix.Count;
@@ -276,7 +273,7 @@ namespace Matrix
 
 
 
-    /* Transform augmented matrix into eshelon form */
+    /* TODO: Transform augmented matrix into eshelon form */
 
 }   // End Namespace 
 

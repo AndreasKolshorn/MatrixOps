@@ -90,7 +90,6 @@ namespace Matrix
 
             dataMatrix = matrix.NewDataMatrix(4, 1);
             matrix.ListRect(dataMatrix);
-
         }
 
         public static void SortMatrixRows()
