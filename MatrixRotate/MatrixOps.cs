@@ -271,8 +271,6 @@ namespace Matrix
         }
     }
 
-
-
     /* TODO: Transform augmented matrix into eshelon form */
 
 }   // End Namespace 

@@ -10,7 +10,6 @@ namespace Matrix
             Console.Clear();
             while (true)
             {
-
                 Console.WriteLine("Matrix Related Methods");
                 Console.WriteLine("1) Rotate matrix 90 degees.");
                 Console.WriteLine("2) Create matrix size n * m. random values.");
@@ -48,7 +47,6 @@ namespace Matrix
                     case ConsoleKey.D6:
                         CreateLowerLeft();
                         break;
-
                 }
                 Console.ReadKey();
                 Console.Clear();
@@ -70,6 +68,7 @@ namespace Matrix
             matrix.Rotate_90(dataMatrix);
             matrix.ListRect(dataMatrix);
         }
+
         public static void CreateMatrixRandom()
         {
             Console.Clear();
