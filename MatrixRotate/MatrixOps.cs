@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MatrixOps
+namespace Matrix
 {
     public class MatrixOps
     {
@@ -11,9 +11,7 @@ namespace MatrixOps
         public MatrixOps()
         {
             Instances += 1;
-            Console.WriteLine($"Create Matrix Ops Object cnt={Instances} ");
         }
-
 
         public void Rotate_90(List<List<int>> matrix)
         {
@@ -21,6 +19,7 @@ namespace MatrixOps
             int size;
             int tail;
 
+            Instances -= 1;
             size = (matrix.Count ==matrix[0].Count? matrix.Count :0 );
 
             for (int box = 0; box < size / 2; box++)
@@ -33,7 +32,6 @@ namespace MatrixOps
                     matrix[runner][size - box - 1] = tail;                                      //TR
                 }
         }
-
 
         public List<List<int>> NewDataSeed(int size,int seed)
         {
@@ -276,6 +274,9 @@ namespace MatrixOps
         }
     }
 
+
+
+    /* Transform augmented matrix into eshelon form */
 
 }   // End Namespace 
 

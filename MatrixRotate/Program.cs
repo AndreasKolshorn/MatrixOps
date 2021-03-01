@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MatrixOps
+namespace Matrix
 {
     class Program
     {
@@ -79,7 +79,6 @@ namespace MatrixOps
 
             dataMatrix = matrix.NewDataRandom(4, 7);
             matrix.ListRect(dataMatrix);
-
         }
 
         public static void CreateMatrixSeed()
@@ -130,8 +129,6 @@ namespace MatrixOps
             else
                 matrix.ListRect(mC);
 
-
-
             Console.ReadKey();
         }
 
@@ -150,19 +147,3 @@ namespace MatrixOps
     }
 }
 
-       /*             var matrix = new MatrixOps();
-
-                   int size = 5;
-                   List<List<int>> dataMatrix;
-
-                   List<List<int>> identityMatrix;
-
-                   //Identity Matrix
-                   identityMatrix = matrix.NewIdentity(size);
-                   matrix.List(identityMatrix, size, "Identity matrix is:");
-
-         
-
-
-                   Console.ReadKey();
-         */
