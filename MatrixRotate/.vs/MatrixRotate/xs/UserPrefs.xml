@@ -1,7 +1,7 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{B12F86B6-808E-4324-A268-80BA3BE9FFF9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MatrixOps.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="MatrixOps.cs" Line="12" Column="1" />
+      <File FileName="MatrixOps.cs" Line="15" Column="28" />
       <File FileName="Program.cs" />
       <File FileName="TEST/Test.cs" />
     </Files>
@@ -9,9 +9,8 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MatrixRotate" expanded="True">
-            <Node name="MatrixRotate" expanded="True">
+            <Node name="MatrixRotate" expanded="True" selected="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="MatrixOps.cs" selected="True" />
             </Node>
             <Node name="TEST" expanded="True" />
           </Node>
