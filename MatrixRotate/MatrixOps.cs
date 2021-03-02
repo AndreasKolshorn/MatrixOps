@@ -18,7 +18,6 @@ namespace Matrix
             /* Rotate input matrix 90 degrees clockwise, in place. Time = O(n^2). Space= O(n^2). */
             int size;
             int tail;
-            int garbage;
 
             Instances -= 1;
             size = (matrix.Count ==matrix[0].Count? matrix.Count :0 );

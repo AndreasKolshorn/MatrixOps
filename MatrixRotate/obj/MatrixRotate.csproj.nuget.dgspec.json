@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixOps/MatrixRotate/MatrixRotate.csproj": {}
+    "/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/MatrixRotate.csproj": {}
   },
   "projects": {
-    "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixOps/MatrixRotate/MatrixRotate.csproj": {
+    "/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/MatrixRotate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixOps/MatrixRotate/MatrixRotate.csproj",
+        "projectUniqueName": "/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/MatrixRotate.csproj",
         "projectName": "MatrixRotate",
-        "projectPath": "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixOps/MatrixRotate/MatrixRotate.csproj",
+        "projectPath": "/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/MatrixRotate.csproj",
         "packagesPath": "/Users/andreaskolshorn/.nuget/packages/",
-        "outputPath": "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixOps/MatrixRotate/obj/",
+        "outputPath": "/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -40,6 +40,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

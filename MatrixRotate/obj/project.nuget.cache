@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "obok/dJJaAgVA+jxRU7AuiWNxT2/W9RNALlCyHAMj6yNFs+Fvu6+6AGj6k9OT9WnmC2HkBVb2Qa4MOtsCO4Zyg==",
+  "dgSpecHash": "+giBF7lu+gSTfVZgCq7aHzc9jlxmx5WimiOdFn9X9FjnPbJJj5pDr29Y5PFGpmjG+zayT93G246uaR9S5HuRCw==",
   "success": true,
-  "projectFilePath": "/Users/andreaskolshorn/Projects/MatrixRotate/MatrixOps/MatrixRotate/MatrixRotate.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/MatrixRotate.csproj",
+  "expectedPackageFiles": [
+    "/Users/andreaskolshorn/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/andreaskolshorn/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
+    "/Users/andreaskolshorn/.nuget/packages/nunit/3.13.1/nunit.3.13.1.nupkg.sha512"
+  ],
   "logs": []
 }
