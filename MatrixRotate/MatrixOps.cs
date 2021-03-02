@@ -7,7 +7,9 @@ namespace Matrix
     {
         public string RunError { get; set; } 
         public static int Instances { get; set; }
- 
+
+
+
         public MatrixOps()
         {
             Instances += 1;
