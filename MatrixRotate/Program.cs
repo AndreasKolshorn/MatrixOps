@@ -16,7 +16,7 @@ namespace Matrix
                 Console.WriteLine("3) Create matrix size n * m. seed values.");
                 Console.WriteLine("4) Multiply two matricies n * m.");
                 Console.WriteLine("5) Sort random values by row.");
-                Console.WriteLine("6) Fill lower left with 1's.");
+                Console.WriteLine("6) Fill the lower left with 1's.");
 
                 Console.WriteLine("Type a number or ESC to quit");
                 var info = Console.ReadKey();

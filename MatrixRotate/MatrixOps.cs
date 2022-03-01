@@ -59,6 +59,7 @@ namespace Matrix
 
         public List<List<int>> MultiplyRectangular(List<List<int>> left, List<List<int>> right)
         {
+            // Naive approach to matrix multiply, 3 loops, with run time of O(n^3)
             RunError = "";
             List<List<int>> result = new();
 

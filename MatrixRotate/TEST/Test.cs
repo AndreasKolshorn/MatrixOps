@@ -8,6 +8,7 @@ namespace TEST
         [Test()]
         public void TestCase()
         {
+            Console.WriteLine("Running this test");
         }
     }
 }

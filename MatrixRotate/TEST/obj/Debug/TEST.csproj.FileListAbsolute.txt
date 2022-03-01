@@ -1,0 +1,10 @@
+/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/TEST/bin/Debug/TEST.dll
+/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/TEST/bin/Debug/TEST.pdb
+/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/TEST/bin/Debug/nunit.framework.dll
+/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/TEST/bin/Debug/nunit.framework.pdb
+/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/TEST/bin/Debug/nunit.framework.xml
+/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/TEST/obj/Debug/TEST.csproj.AssemblyReference.cache
+/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/TEST/obj/Debug/TEST.csproj.CoreCompileInputs.cache
+/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/TEST/obj/Debug/TEST.csproj.CopyComplete
+/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/TEST/obj/Debug/TEST.dll
+/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/TEST/obj/Debug/TEST.pdb

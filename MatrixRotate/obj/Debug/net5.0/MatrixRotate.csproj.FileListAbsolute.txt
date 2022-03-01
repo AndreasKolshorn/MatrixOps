@@ -5,7 +5,6 @@
 /Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/bin/Debug/net5.0/ref/MatrixRotate.dll
 /Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/bin/Debug/net5.0/MatrixRotate.pdb
 /Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/bin/Debug/net5.0/nunit.framework.dll
-/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/obj/Debug/net5.0/MatrixRotate.csprojAssemblyReference.cache
 /Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/obj/Debug/net5.0/MatrixRotate.GeneratedMSBuildEditorConfig.editorconfig
 /Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/obj/Debug/net5.0/MatrixRotate.AssemblyInfoInputs.cache
 /Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/obj/Debug/net5.0/MatrixRotate.AssemblyInfo.cs
@@ -15,3 +14,4 @@
 /Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/obj/Debug/net5.0/ref/MatrixRotate.dll
 /Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/obj/Debug/net5.0/MatrixRotate.pdb
 /Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/obj/Debug/net5.0/MatrixRotate.genruntimeconfig.cache
+/Users/andreaskolshorn/Projects/MatrixOps/MatrixRotate/obj/Debug/net5.0/MatrixRotate.csproj.AssemblyReference.cache
